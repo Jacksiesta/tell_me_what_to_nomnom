@@ -12,18 +12,9 @@ class meal:
         self.name = name
         self.ingr1 = ingr1
         self.ingr2 = ingr2
+m = []
+m.append(meal("spag bol", "pasta", "tomato sauce"))
+m.append(meal("pizza", "tomato sauce", "pizza dough"))
+m.append(meal("fried rice", "white rice", "courgette"))
 
-m1 = meal("spag bol", "pasta", "tomato sauce")
-m2 = meal("pizza", "tomato sauce", "pizza dough")
-m3 = meal("fried rice", "white rice", "courgette")
-
-
-'''
-yn = 'N'
-while yn == 'N':
-    print("Hey, how does :::" + my_foods[random.randint(0, 2)] + "::: sound?")
-    value = input("-> Y/N\n")
-    print("You entered {}".format(value))
-    if value == 'Y':
-        exit()
-'''
+print("Hey, you hungy? How does " + m[random.randint(0, 2)].name + " sound?")
