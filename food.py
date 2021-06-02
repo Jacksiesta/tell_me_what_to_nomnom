@@ -13,6 +13,7 @@ m.append(meal("spag bol", "pasta", "tomato sauce"))
 m.append(meal("pizza", "tomato sauce", "pizza dough"))
 m.append(meal("fried rice", "white rice", "courgette"))
 m.append(meal("Nutella sandwich", "Nutella", "bread"))
+m.append(meal("Thuna sandwich", "bread", "thuna"))
 
 ### WORKS
 #r = random.randint(0, len(m) - 1)
@@ -24,7 +25,13 @@ food = input("What ingredient do you have?\n -> ").lower()
 for i in range(0, len(m)):
     if m[i].ingr1 == food:
         print("You can make {}".format(m[i].name))
-        break
+        yn = input("Sounds good? Type y/n -> ").lower()
+        if yn == 'y':
+            print("Bon appetit!\n")
+            break
     elif m[i].ingr2 == food:
         print("You can make {}".format(m[i].name))
-        break
+        yn = input("Sounds good? Type y/n -> ").lower()
+        if yn == 'y':
+            print("Bon appetit!\n")
+            break
