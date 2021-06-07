@@ -48,8 +48,9 @@ def list_all_meals():
     yn = input("Would you like to see all meals you are capable of making? y/n \n").lower()
     if yn == 'y':
         for i in range(0, len(m)):
-            print("hey ")
             print(f"{i + 1}. {m[i].name}")
+    if yn == 'n':
+        print("oh well \n")
 
 print(list_all_meals())
 
