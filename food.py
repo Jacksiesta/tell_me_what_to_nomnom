@@ -12,8 +12,8 @@ m = []
 m.append(meal("spag bol", "pasta", "tomato sauce"))
 m.append(meal("pizza", "tomato sauce", "pizza dough"))
 m.append(meal("fried rice", "white rice", "courgette"))
-m.append(meal("Nutella sandwich", "Nutella", "bread"))
-m.append(meal("Thuna sandwich", "bread", "thuna"))
+m.append(meal("nutella sandwich", "nutella", "bread"))
+m.append(meal("thuna sandwich", "bread", "thuna"))
 
 ### WORKS
 #r = random.randint(0, len(m) - 1)
@@ -22,6 +22,7 @@ m.append(meal("Thuna sandwich", "bread", "thuna"))
 
 # it'd be cool to input an ingredient, and output suggestion meal
 food = input("What ingredient do you have?\n -> ").lower()
+
 for i in range(0, len(m)):
     if m[i].ingr1 == food:
         print("You can make {}".format(m[i].name))
