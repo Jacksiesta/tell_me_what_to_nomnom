@@ -6,7 +6,9 @@ class meal:
         self.name = name
         self.ingr1 = ingr1
         self.ingr2 = ingr2
-#what if 3rd ingredient?
+# what if 3rd ingredient?
+
+# creates list of meals + ingr
 
 m = []
 m.append(meal("spag bol", "pasta", "tomato sauce"))
@@ -20,9 +22,16 @@ m.append(meal("thuna sandwich", "bread", "thuna"))
 #print("Hey, you hungy? How does " + m[r].name + " sound?\n")
 #print("You're gonna need \n - " + m[r].ingr1 + " \n - " + m[r].ingr2)
 
+
+
 # it'd be cool to input an ingredient, and output suggestion meal
+<<<<<<< HEAD
 food = input("What ingredient do you have?\n -> ").lower()
 
+=======
+'''
+food = input("What ingredient do you have in your fridge?\n -> ").lower()
+>>>>>>> 845788bdbcf721675973c7db2a6334fb17dc08c9
 for i in range(0, len(m)):
     if m[i].ingr1 == food:
         print("You can make {}".format(m[i].name))
@@ -36,3 +45,17 @@ for i in range(0, len(m)):
         if yn == 'y':
             print("Bon appetit!\n")
             break
+'''
+
+# list all possible meals
+
+def list_all_meals():
+    yn = input("Would you like to see all meals you are capable of making? y/n \n").lower()
+    if yn == 'y':
+        for i in range(0, len(m)):
+            print(f"{i + 1}. {m[i].name}")
+    if yn == 'n':
+        print("oh well \n")
+
+print(list_all_meals())
+
